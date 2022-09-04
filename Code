@@ -1,0 +1,8 @@
+!pip install kafka-python
+
+from kafka import KafkaConsumer
+
+consumer= KafkaConsumer('Topik_Name',bootstrap_servers="IP",auto_offset_reset="earliest")
+
+for msg in consumer :
+  print(msg)
